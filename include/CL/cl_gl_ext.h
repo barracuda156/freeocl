@@ -33,7 +33,7 @@
 extern "C" {
 #endif
 
-#ifdef __APPLE__
+#if defined(__APPLE__) && !defined(USE_KHR_CL)
     #include <OpenCL/cl_gl.h>
 #else
     #include <CL/cl_gl.h>

@@ -33,11 +33,14 @@
 extern "C" {
 #endif
 
-#ifdef __APPLE__
+#if defined(__APPLE__) && !defined(USE_KHR_CL)
 	#include <OpenCL/cl.h>
-    #include <AvailabilityMacros.h>
 #else
 	#include <CL/cl.h>
+#endif
+
+#ifdef __APPLE__
+	#include <AvailabilityMacros.h>
 #endif
 
 /* cl_khr_fp16 extension - no extension #define since it has no functions  */

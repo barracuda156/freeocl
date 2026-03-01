@@ -15,7 +15,7 @@
 	You should have received a copy of the GNU Lesser General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>
 */
-#if defined(__APPLE__) || defined(__MACOSX)
+#if defined(__APPLE__) && !defined(USE_KHR_CL)
 #include <OpenCL/cl_ext.h>
 #else
 #include <CL/cl_ext.h>

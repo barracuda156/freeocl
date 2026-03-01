@@ -24,11 +24,11 @@
 #ifndef __OPENCL_CL_GL_H
 #define __OPENCL_CL_GL_H
 
-#ifdef __APPLE__
+#if defined(__APPLE__) && !defined(USE_KHR_CL)
 #include <OpenCL/cl.h>
 #else
 #include <CL/cl.h>
-#endif	
+#endif
 
 #ifdef __cplusplus
 extern "C" {

@@ -18,7 +18,7 @@
 #ifndef __ERRORS_H__
 #define __ERRORS_H__
 
-#if defined(__APPLE__) || defined(__MACOSX)
+#if defined(__APPLE__) && !defined(USE_KHR_CL)
 #include <OpenCL/cl_platform.h>
 #else
 #include <CL/cl_platform.h>

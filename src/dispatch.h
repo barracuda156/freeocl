@@ -18,7 +18,7 @@
 #ifndef __FREEOCL_DISPATCH_H__
 #define __FREEOCL_DISPATCH_H__
 
-#if defined(__APPLE__) || defined(__MACOSX)
+#if defined(__APPLE__) && !defined(USE_KHR_CL)
 #include <OpenCL/cl.h>
 #else
 #include <CL/cl.h>

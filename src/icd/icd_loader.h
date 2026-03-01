@@ -18,7 +18,7 @@
 #ifndef __FREEOCL_ICD_LOADER_H__
 #define __FREEOCL_ICD_LOADER_H__
 
-#if defined(__APPLE__) || defined(__MACOSX)
+#if defined(__APPLE__) && !defined(USE_KHR_CL)
 #include <OpenCL/cl_ext.h>
 #else
 #include <CL/cl_ext.h>

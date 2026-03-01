@@ -174,14 +174,17 @@
 //#endif // #if !defined(CL_USE_DEPRECATED_OPENCL_1_1_APIS)
 
 
-#if defined(__APPLE__) || defined(__MACOSX)
+#if defined(__APPLE__) && !defined(USE_KHR_CL)
 #include <OpenGL/OpenGL.h>
 #include <OpenCL/opencl.h>
-#include <libkern/OSAtomic.h>
 #else
 #include <GL/gl.h>
 #include <CL/opencl.h>
 #endif // !__APPLE__
+
+#ifdef __APPLE__
+#include <libkern/OSAtomic.h>
+#endif
 
 // To avoid accidentally taking ownership of core OpenCL types
 // such as cl_kernel constructors are made explicit
