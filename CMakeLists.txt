@@ -84,7 +84,7 @@ add_subdirectory(samples)
 add_subdirectory(src)
 
 if(NOT (CMAKE_SYSTEM_NAME STREQUAL "Windows"))
-	install(FILES icd/freeocl.icd DESTINATION /etc/OpenCL/vendors/)
+	install(FILES icd/freeocl.icd DESTINATION ${CMAKE_INSTALL_PREFIX}/etc/OpenCL/vendors/)
 endif(NOT (CMAKE_SYSTEM_NAME STREQUAL "Windows"))
 
 # OpenCL headers shouldn't be needed in the runtime package
