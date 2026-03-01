@@ -24,6 +24,13 @@
 #include <CL/cl_ext.h>
 #endif
 
+#ifndef CL_PLATFORM_ICD_SUFFIX_KHR
+#define CL_PLATFORM_ICD_SUFFIX_KHR 0x0920
+#endif
+#ifndef CL_PLATFORM_NOT_FOUND_KHR
+#define CL_PLATFORM_NOT_FOUND_KHR -1001
+#endif
+
 #include <cstring>
 #include <string>
 #include <deque>
